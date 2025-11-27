@@ -5,24 +5,42 @@
 class Bwenv < Formula
   desc "CLI tool to manage .env files with Bitwarden"
   homepage "https://github.com/b4m-oss/bwenv"
-  version "0.9.1"
+  version "0.10.0"
   license "MIT"
-  depends_on :macos
 
-  if Hardware::CPU.intel?
-    url "https://github.com/b4m-oss/bwenv/releases/download/v0.9.1/bwenv_darwin_amd64.tar.gz"
-    sha256 "5ac4a7f70a4d8447458f72a9360dbd47e938858fa64efc8672ae32bb4a2f8646"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/b4m-oss/bwenv/releases/download/v0.10.0/bwenv_darwin_amd64.tar.gz"
+      sha256 "d015e024f8ac0211d14ff76b1f88930a97825aa49ac2debac1e8ec27c1687c83"
 
-    def install
-      bin.install "bwenv"
+      def install
+        bin.install "bwenv"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/b4m-oss/bwenv/releases/download/v0.10.0/bwenv_darwin_arm64.tar.gz"
+      sha256 "2e3b5349c679c9fa577d4693f9c98136ee827060c7a05f3fc842f3d73be665b4"
+
+      def install
+        bin.install "bwenv"
+      end
     end
   end
-  if Hardware::CPU.arm?
-    url "https://github.com/b4m-oss/bwenv/releases/download/v0.9.1/bwenv_darwin_arm64.tar.gz"
-    sha256 "7519177387e8f9207c1ed25cbdc4c26afeadda16b6a12598e403c6cbd66d4e17"
 
-    def install
-      bin.install "bwenv"
+  on_linux do
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/b4m-oss/bwenv/releases/download/v0.10.0/bwenv_linux_amd64.tar.gz"
+      sha256 "e36ba982b8994380d2eac6e5b937d07b62066e00bc0cd4edea9d606e8ca21b16"
+      def install
+        bin.install "bwenv"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/b4m-oss/bwenv/releases/download/v0.10.0/bwenv_linux_arm64.tar.gz"
+      sha256 "269a2c9d45ac437b8c2da6a8f4d476c3abc6998708b858d89f40c1df4dd90bcb"
+      def install
+        bin.install "bwenv"
+      end
     end
   end
 
