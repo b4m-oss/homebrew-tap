@@ -5,21 +5,21 @@
 class Bwenv < Formula
   desc "CLI tool to manage .env files with Bitwarden"
   homepage "https://github.com/b4m-oss/bwenv"
-  version "0.10.1"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/b4m-oss/bwenv/releases/download/v0.10.1/bwenv_darwin_amd64.tar.gz"
-      sha256 "5d2f4e56514b810b3353e8a1c25d7f3868427bd83136c9e9bf23c40d45795e9b"
+      url "https://github.com/b4m-oss/bwenv/releases/download/v0.11.0/bwenv_darwin_amd64.tar.gz"
+      sha256 "d58893bb399ae83b818bc6a4d3123739cbe5bbab096db5d354012d6c3927ec69"
 
       def install
         bin.install "bwenv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/b4m-oss/bwenv/releases/download/v0.10.1/bwenv_darwin_arm64.tar.gz"
-      sha256 "8254f03f67aa76f42b4674984f5fc7cb52c5329bcf57c349f4ba7fc498ae41e6"
+      url "https://github.com/b4m-oss/bwenv/releases/download/v0.11.0/bwenv_darwin_arm64.tar.gz"
+      sha256 "168a66480768f395404b7b1523adf1f1a38aef6aa7174dfd4a8387f7026a57e8"
 
       def install
         bin.install "bwenv"
@@ -29,15 +29,15 @@ class Bwenv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/b4m-oss/bwenv/releases/download/v0.10.1/bwenv_linux_amd64.tar.gz"
-      sha256 "a1fe269cbb9399834f43f26578d09cb0d2d0fe0431576dee1a87fc096db5d558"
+      url "https://github.com/b4m-oss/bwenv/releases/download/v0.11.0/bwenv_linux_amd64.tar.gz"
+      sha256 "0bd4908c829e7627bbbeb4fbeca99cc42d21fcb8aa7cac852dddb22abf944e67"
       def install
         bin.install "bwenv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/b4m-oss/bwenv/releases/download/v0.10.1/bwenv_linux_arm64.tar.gz"
-      sha256 "b06db13f405cf03b0702f328002e1f4eef31705766b970a7a9ccf2cdeaeea583"
+      url "https://github.com/b4m-oss/bwenv/releases/download/v0.11.0/bwenv_linux_arm64.tar.gz"
+      sha256 "adf16f6e51cf47bdcab01e7b001b823d94c7b1243ce0faccde0fe1d3ebb6dec4"
       def install
         bin.install "bwenv"
       end
