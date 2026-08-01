@@ -5,23 +5,23 @@
 class Bwsf < Formula
   desc "CLI tool to manage .env files with Bitwarden"
   homepage "https://github.com/b4m-oss/bwsf"
-  version "0.11.1"
+  version "0.11.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/b4m-oss/bwsf/releases/download/v0.11.1/bwsf_darwin_amd64.tar.gz"
-      sha256 "02d785e15e04d56830aa09746a62948784ffee4c97954044ef2f0d691f128b0c"
+      url "https://github.com/b4m-oss/bwsf/releases/download/v0.11.2/bwsf_darwin_amd64.tar.gz"
+      sha256 "a011c4769931491dd649672bce1a8fb09230051b586e4301a292cf39907a477f"
 
-      def install
+      define_method(:install) do
         bin.install "bwsf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/b4m-oss/bwsf/releases/download/v0.11.1/bwsf_darwin_arm64.tar.gz"
-      sha256 "5810bdb3b41268c9eefbbeecb76c42cffbd1078af06c7c33e4fe1ed70e13820e"
+      url "https://github.com/b4m-oss/bwsf/releases/download/v0.11.2/bwsf_darwin_arm64.tar.gz"
+      sha256 "8f8aeb22b547c9e78d54c115944ea53a228a46b212481eb8059fadd0fec219e0"
 
-      def install
+      define_method(:install) do
         bin.install "bwsf"
       end
     end
@@ -29,16 +29,16 @@ class Bwsf < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/b4m-oss/bwsf/releases/download/v0.11.1/bwsf_linux_amd64.tar.gz"
-      sha256 "ef07cc875e5d062ea1b551c68535d2c71e2415b2845f271c2286c71a1c1e775f"
-      def install
+      url "https://github.com/b4m-oss/bwsf/releases/download/v0.11.2/bwsf_linux_amd64.tar.gz"
+      sha256 "523b99005bb4c179b70c3abfc7c1568ddd02337ba5fc75334dab002234e0228e"
+      define_method(:install) do
         bin.install "bwsf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/b4m-oss/bwsf/releases/download/v0.11.1/bwsf_linux_arm64.tar.gz"
-      sha256 "2869f0766515705f921de6a83b6ae9953b656b413431d04d69dc54aedc5c443c"
-      def install
+      url "https://github.com/b4m-oss/bwsf/releases/download/v0.11.2/bwsf_linux_arm64.tar.gz"
+      sha256 "defa29032d5e84e6a7fba58b08799663371090349af7ddd80e4eb0404428dc5d"
+      define_method(:install) do
         bin.install "bwsf"
       end
     end
