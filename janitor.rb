@@ -4,8 +4,8 @@
 class Janitor < Formula
   desc "Clean up package directories as oneshot"
   homepage "https://github.com/b4moss/janitor"
-  url "https://github.com/b4moss/janitor/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "496fd5c6e9c02c8d63eb412471dfb235df70f79a94325d8aee317faa94ac1a9a"
+  url "https://github.com/b4moss/janitor/releases/download/v0.2.1/janitor-0.2.1.tar.gz"
+  sha256 "0ce5b069017cba353849d4d4eacf26c1dfadf1e855d9f2245e217d87141a47b0"
   license "MIT"
 
   def install
