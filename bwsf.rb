@@ -5,21 +5,21 @@
 class Bwsf < Formula
   desc "CLI tool to manage .env files with Bitwarden"
   homepage "https://github.com/b4moss/bwsf"
-  version "0.19.1"
+  version "0.20.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/b4moss/bwsf/releases/download/v0.19.1/bwsf_darwin_amd64.tar.gz"
-      sha256 "f2a97cca167148357c020ec0a44df9fa3e24e3de4965b9c6b1982c9e8ae56986"
+      url "https://github.com/b4moss/bwsf/releases/download/v0.20.0/bwsf_darwin_amd64.tar.gz"
+      sha256 "04d13ed601e7f8fbc0860d9d435745fda9de4989e80c29a395ac5b997528bb4c"
 
       define_method(:install) do
         bin.install "bwsf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/b4moss/bwsf/releases/download/v0.19.1/bwsf_darwin_arm64.tar.gz"
-      sha256 "db062870af73e415265ecbe3a22e09ab2d794e1f592047b2f652571f150ba94b"
+      url "https://github.com/b4moss/bwsf/releases/download/v0.20.0/bwsf_darwin_arm64.tar.gz"
+      sha256 "6127d98f35ca2f5e7f15235d2fc542113741d01d817b998db0c1d9accdcd2433"
 
       define_method(:install) do
         bin.install "bwsf"
@@ -29,15 +29,15 @@ class Bwsf < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/b4moss/bwsf/releases/download/v0.19.1/bwsf_linux_amd64.tar.gz"
-      sha256 "4c826dd7178e22d66ea147a489b36d3c8286308cef7f4d4a0474cf700d086112"
+      url "https://github.com/b4moss/bwsf/releases/download/v0.20.0/bwsf_linux_amd64.tar.gz"
+      sha256 "267e0cabc45cc5050e33ccfcad6c6b7c2a624658d7faa2863328f35f87a78089"
       define_method(:install) do
         bin.install "bwsf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/b4moss/bwsf/releases/download/v0.19.1/bwsf_linux_arm64.tar.gz"
-      sha256 "72603c74cfd69265cdc07dc91b3a97b628dd37d9688db8952ddc5cc157ffdf12"
+      url "https://github.com/b4moss/bwsf/releases/download/v0.20.0/bwsf_linux_arm64.tar.gz"
+      sha256 "4034b770668fb45ad271b7b1894b1ce223a43a6e8cd0c66ee74625f01721de75"
       define_method(:install) do
         bin.install "bwsf"
       end
